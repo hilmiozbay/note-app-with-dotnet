@@ -1,0 +1,21 @@
+﻿@model Proje5.Models.NoteViewModel
+
+@{
+    ViewData["Title"] = "Edit Note";
+}
+
+<h1>Not Güncelle</h1>
+
+<form asp-action="EditNote" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+</form>
+
+<div class="mt-3">
+    <a class="btn btn-secondary" asp-controller="User" asp-action="UserMenu">Menü</a>
+</div>

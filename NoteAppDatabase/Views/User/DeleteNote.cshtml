@@ -1,0 +1,15 @@
+﻿@model Proje5.Models.Notes
+
+@{
+    ViewData["Title"] = "Delete Note";
+}
+
+<h1>Not Silme</h1>
+
+<p>Silmek istediğinizden emin misiniz?</p>
+
+<form asp-action="DeleteNote" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Evet</button>
+    <a href="@Url.Action("ListNotes", "User")" class="btn btn-secondary">Hayır</a>
+</form>

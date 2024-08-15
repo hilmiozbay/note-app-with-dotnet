@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Proje5.Models.Notes>
+
+@{
+    ViewData["Title"] = "List Notes";
+}
+
+<h1>Not Listesi</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Notlar</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var note in Model)
+        {
+            <tr>
+                <td>@note.Description</td>
+                <td>
+                <td>
+                    <a asp-controller="User" asp-action="EditNote" asp-route-id="@note.Id" class="btn btn-warning" style="width:250px">Güncelle</a>
+                </td>
+                <td>
+                    <a asp-controller="User" asp-action="DeleteNote" asp-route-id="@note.Id" class="btn btn-danger" style="width:250px">Sil</a>
+                </td>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div class="mt-3">
+    <a class="btn btn-secondary" asp-area="" asp-controller="User" asp-action="UserMenu">Ana Menü</a>
+</div>
