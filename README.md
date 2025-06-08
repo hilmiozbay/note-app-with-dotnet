@@ -51,6 +51,6 @@ This is a web-based note-taking application built with ASP.NET Core MVC and Post
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/ozbayhilmi/NoteAppWithDatabase.git
+   git clone https://github.com/ozbayhilmi/note-app-with-dotnet
 
 
